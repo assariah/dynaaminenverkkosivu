@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
+<!--
     <div id="root"></div>
     <script type="text/babel">
 
@@ -17,7 +18,18 @@
         const root = ReactDOM.createRoot(container);
     function tick(){    
         const element = (
-        <h3>{new Date().toLocaleTimeString([], {second: '2-digit'})}</h3>
+        <h3>{new Date().toLocaleTimeString([], {second: '2-digit')}</h3>
+        );
+    -->
+    <div id="root"></div>
+    <script type="text/babel">
+    let seconds = 0
+        const container = document.getElementById('root')
+        const root = ReactDOM.createRoot(container);
+    function tick(){    
+        seconds++
+        const element = (
+        <h3>{seconds}</h3>
         );
       root.render(element);
     }
